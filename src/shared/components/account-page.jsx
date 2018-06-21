@@ -2,15 +2,21 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route,Link } from 'react-router-dom'
 
 class AccountPage extends Component {
-
-
+    constructor(){
+        super();
+        this.submitHandler = this.submitHandler.bind(this);
+    }
+    submitHandler(e){
+        e.preventDefault();
+        this.inputId.focus();
+    }
     render() {
         return (
-            <form className="col-md-4 offset-md-2 acc-form">
+            <form className="col-md-4 offset-md-2 acc-form" onSubmit={this.submitHandler}>
                 <div className="form-group">
                     <label htmlFor="" className="col-form-label col-form-label-sm">YOUR ACCOUNT ID IS:</label>
                     <div className="input-group">
-                        <input type="text" className="form-control form-control-lg bg-dark text-white" />
+                        <input type="text" className="form-control form-control-lg bg-dark text-white" ref={node =>  {this.inputId = node} } />
                         <div className="input-group-append">
                             <button className="btn btn-lg btn-outline-light">
                                 <span className="fz-but">copy</span>
@@ -21,7 +27,7 @@ class AccountPage extends Component {
                 <div className="form-group">
                     <label htmlFor="" className="col-form-label col-form-label-sm">YOUR DISPLAYED NAME IS:</label>
                     <div className="input-group">
-                        <input type="text" className="form-control form-control-lg bg-dark text-white" />
+                        <input type="text" className="form-control form-control-lg bg-dark text-white" ref={ node => { this.inputName = node}} />
                         <div className="input-group-append">
                             <button className="btn btn-lg btn-outline-light">
                                 <span className="fz-but">edit</span>
