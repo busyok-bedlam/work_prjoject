@@ -1,40 +1,55 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route,Link } from 'react-router-dom'
 
 class AccountPage extends Component {
 
 
     render() {
         return (
-            <form action="" className="bg-dark col-4 ">
-                    <div className="form-group col-12">
-                        <label htmlFor="" className="col-12">label1</label>
-                        <input 
-                            type="text" 
-                            d="login-input" 
-                            className="form-control" 
-                        />
-                    </div>
-                    <div className="form-group col-12">
-                        <label htmlFor="" className="col-12">label2</label>
-                        <input 
-                            type="password" 
-                            id="password-input" 
-                            className="form-control col-12 bg-secondary text-white" 
-                        />
-                    </div>
-                    <div className="form-row col-12">
-                        <div className="form-group col-6">
-                            <input type="text" className="form-control"/>
+            <form className="col-md-4 offset-md-2 acc-form">
+                <div className="form-group">
+                    <label htmlFor="" className="col-form-label col-form-label-sm">YOUR ACCOUNT ID IS:</label>
+                    <div className="input-group">
+                        <input type="text" className="form-control form-control-lg bg-dark text-white" />
+                        <div className="input-group-append">
+                            <button className="btn btn-lg btn-outline-light">
+                                <span className="fz-but">copy</span>
+                            </button>
                         </div>
-                        <div className="form-group col-6">
-                            <input type="text" className="form-control"/>
+                    </div>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="" className="col-form-label col-form-label-sm">YOUR DISPLAYED NAME IS:</label>
+                    <div className="input-group">
+                        <input type="text" className="form-control form-control-lg bg-dark text-white" />
+                        <div className="input-group-append">
+                            <button className="btn btn-lg btn-outline-light">
+                                <span className="fz-but">edit</span>
+                            </button>
                         </div>
-                    </div>              
-                </form>
-                
+                    </div>
+                </div>
+                <div className="form-row">
+                    <div className="form-group col-md-6">
+                        <button className="btn btn-outline-danger btn-lg col-md-12 text-white">
+                            <span className="fz-but">
+                                DEPOSITS & WITHDRAWALS
+                        </span>
+                        </button>
+                    </div>
+                    <div className="form-group col-md-6">
+                        <button className="btn btn-outline-danger btn-lg col-md-12 text-white">
+                           <span className="fz-but">MY BETS</span> 
+                        </button>
+                    </div>
+                </div>
 
+
+            </form>
         )
     }
 }
 
 export default AccountPage;
+
+

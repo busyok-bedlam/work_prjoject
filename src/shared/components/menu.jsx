@@ -11,7 +11,7 @@ const Menu = () => {
         { title: "Withdraw VBucks",nameOfClass: "fas fa-dollar-sign"}
     ]
     return (
-        <div className="col-4 list-group" >
+        <div className="col-md-2 list-group main-color-1 main-nenu" >
             {
                 menuList.map( (item,index) => {
                     const { title,nameOfClass} = item;
