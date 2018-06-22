@@ -59,8 +59,11 @@
     color: #fff;
 }
 .icon-fz {
-    font-size: 5em;
+    font-size: 2em;
 }
 .fz-but {
     font-size: .7em;
+}
+.transparent {
+    background: transparent;
 }

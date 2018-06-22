@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route,Link } from 'react-router-dom';
+import { Route,Link,Redirect } from 'react-router-dom';
 
 
 import Menu from './components/menu';
@@ -12,8 +12,6 @@ class App extends Component {
         return (
             <div className="container-fluid">
                 <div className="row">
-                    <Link to="/account-page" children="account page "/>
-                    <Link to="/buy-vbucks" children="vbucks page "/>
                     <Menu />
                     <Route path="/account-page" component={AccountPage} exact />
                     <Route path="/buy-vbucks" component={BuyVbucksPage} exact />

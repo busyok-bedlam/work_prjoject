@@ -9,7 +9,7 @@ class BuyVbucksPage extends Component {
 
         return (
             <form className="offset-md-2 col-md-4 acc-form">
-                <div className="form-group col-md-12">
+                <div className="d-flex justify-content-center form-group col-md-12">
                     <i className="fas fa-exclamation-triangle icon-fz"></i>
                     <span>The minimum purchase is $5 for 500VBucks</span>
                 </div>
@@ -20,7 +20,7 @@ class BuyVbucksPage extends Component {
                             <input type="text" className="form-control form-control-lg bg-dark text-white" />
                             <div className="input-group-append">
                                 <button className="btn btn-lg btn-outline-light">
-                                    <span className="fz-but">copy</span>
+                                    <span className="fz-but">100$</span>
                                 </button>
                             </div>
                         </div>

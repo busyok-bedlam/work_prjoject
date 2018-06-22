@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route,Link } from 'react-router-dom'
 
+const idValidateFunc = (str) => {
+    let idReg = /\b\d+\b/
+    return !!str.match(idReg);
+}
+const loginValidateFunc = str => {
+    let logReg = /^[a-z]+([-_]?[a-z0-9]+){0,2}$/i;
+    return !!str.match(logReg);
+}
+
 class AccountPage extends Component {
     constructor(){
         super();
@@ -8,7 +17,24 @@ class AccountPage extends Component {
     }
     submitHandler(e){
         e.preventDefault();
-        this.inputId.focus();
+
+        let idInputValue = this.inputId.value;
+        let loginInputValue = this.inputName.value;
+        if(idInputValue && loginInputValue){
+            // debugger;
+            let idValid = idValidateFunc(idInputValue),
+                logValid = loginValidateFunc(loginInputValue)
+            if(idValid && logValid){
+                alert("SUCCESS");
+                this.inputName.value = "";
+                this.inputId.value = "";
+                return;
+            }
+            alert("WRONG PASSWORD OR LOGIN")
+            this.inputName.value = "";
+            this.inputId.value = "";
+        }
+
     }
     render() {
         return (
